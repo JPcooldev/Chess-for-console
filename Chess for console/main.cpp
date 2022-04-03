@@ -6,9 +6,17 @@
 //
 
 #include <iostream>
+#include "Chessboard.h"
+#include "Team.h"
+
+
 
 int main()
 {
+    White TeamWhite;
+    Black TeamBlack;
+    
+    showCH();
     
     return 0;
 }

@@ -7,7 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E85FC56427F8C88800188160 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E85FC56327F8C88800188160 /* main.cpp */; };
+		E85FC57627F8D61900188160 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E85FC56327F8C88800188160 /* main.cpp */; };
+		E85FC57727F8D61900188160 /* Chessboard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E85FC57027F8CF7100188160 /* Chessboard.cpp */; };
+		E85FC57927F8D61900188160 /* Pawn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E85FC56B27F8CA7300188160 /* Pawn.cpp */; };
+		E85FC57C27F8E20A00188160 /* Team.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E85FC57A27F8E20A00188160 /* Team.cpp */; };
+		E85FC57E27F8FEFA00188160 /* Bishop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E85FC57D27F8FEFA00188160 /* Bishop.cpp */; };
+		E85FC58427F8FF2F00188160 /* Rook.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E85FC58327F8FF2F00188160 /* Rook.cpp */; };
+		E85FC58627F8FF4D00188160 /* Queen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E85FC58527F8FF4D00188160 /* Queen.cpp */; };
+		E85FC58827F8FF5800188160 /* King.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E85FC58727F8FF5800188160 /* King.cpp */; };
+		E85FC58B27F9016800188160 /* Knight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E85FC58A27F9016800188160 /* Knight.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +33,22 @@
 /* Begin PBXFileReference section */
 		E85FC56027F8C88800188160 /* Chess for console */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Chess for console"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E85FC56327F8C88800188160 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		E85FC56A27F8C9CB00188160 /* Chessboard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Chessboard.h; sourceTree = "<group>"; };
+		E85FC56B27F8CA7300188160 /* Pawn.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Pawn.cpp; sourceTree = "<group>"; };
+		E85FC56F27F8CB3300188160 /* Pawn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Pawn.h; path = "Chess for console/Pieces/Pawn.h"; sourceTree = SOURCE_ROOT; };
+		E85FC57027F8CF7100188160 /* Chessboard.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Chessboard.cpp; sourceTree = "<group>"; };
+		E85FC57A27F8E20A00188160 /* Team.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Team.cpp; sourceTree = "<group>"; };
+		E85FC57B27F8E20A00188160 /* Team.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Team.h; sourceTree = "<group>"; };
+		E85FC57D27F8FEFA00188160 /* Bishop.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Bishop.cpp; sourceTree = "<group>"; };
+		E85FC57F27F8FF0500188160 /* Bishop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bishop.h; sourceTree = "<group>"; };
+		E85FC58027F8FF1000188160 /* Rook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rook.h; sourceTree = "<group>"; };
+		E85FC58127F8FF1900188160 /* Queen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Queen.h; sourceTree = "<group>"; };
+		E85FC58227F8FF2000188160 /* King.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = King.h; sourceTree = "<group>"; };
+		E85FC58327F8FF2F00188160 /* Rook.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Rook.cpp; sourceTree = "<group>"; };
+		E85FC58527F8FF4D00188160 /* Queen.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Queen.cpp; sourceTree = "<group>"; };
+		E85FC58727F8FF5800188160 /* King.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = King.cpp; sourceTree = "<group>"; };
+		E85FC58A27F9016800188160 /* Knight.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Knight.cpp; sourceTree = "<group>"; };
+		E85FC58C27F9017200188160 /* Knight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Knight.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +82,32 @@
 			isa = PBXGroup;
 			children = (
 				E85FC56327F8C88800188160 /* main.cpp */,
+				E85FC56A27F8C9CB00188160 /* Chessboard.h */,
+				E85FC57027F8CF7100188160 /* Chessboard.cpp */,
+				E85FC57B27F8E20A00188160 /* Team.h */,
+				E85FC57A27F8E20A00188160 /* Team.cpp */,
+				E85FC58927F8FF7400188160 /* Pieces */,
 			);
 			path = "Chess for console";
+			sourceTree = "<group>";
+		};
+		E85FC58927F8FF7400188160 /* Pieces */ = {
+			isa = PBXGroup;
+			children = (
+				E85FC56F27F8CB3300188160 /* Pawn.h */,
+				E85FC56B27F8CA7300188160 /* Pawn.cpp */,
+				E85FC58027F8FF1000188160 /* Rook.h */,
+				E85FC58327F8FF2F00188160 /* Rook.cpp */,
+				E85FC58C27F9017200188160 /* Knight.h */,
+				E85FC58A27F9016800188160 /* Knight.cpp */,
+				E85FC57F27F8FF0500188160 /* Bishop.h */,
+				E85FC57D27F8FEFA00188160 /* Bishop.cpp */,
+				E85FC58127F8FF1900188160 /* Queen.h */,
+				E85FC58527F8FF4D00188160 /* Queen.cpp */,
+				E85FC58227F8FF2000188160 /* King.h */,
+				E85FC58727F8FF5800188160 /* King.cpp */,
+			);
+			path = Pieces;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,7 +167,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E85FC56427F8C88800188160 /* main.cpp in Sources */,
+				E85FC58427F8FF2F00188160 /* Rook.cpp in Sources */,
+				E85FC57C27F8E20A00188160 /* Team.cpp in Sources */,
+				E85FC58827F8FF5800188160 /* King.cpp in Sources */,
+				E85FC57E27F8FEFA00188160 /* Bishop.cpp in Sources */,
+				E85FC57627F8D61900188160 /* main.cpp in Sources */,
+				E85FC58B27F9016800188160 /* Knight.cpp in Sources */,
+				E85FC57727F8D61900188160 /* Chessboard.cpp in Sources */,
+				E85FC57927F8D61900188160 /* Pawn.cpp in Sources */,
+				E85FC58627F8FF4D00188160 /* Queen.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +295,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				GCC_NO_COMMON_BLOCKS = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -247,6 +304,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				GCC_NO_COMMON_BLOCKS = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

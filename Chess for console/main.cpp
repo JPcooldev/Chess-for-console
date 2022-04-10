@@ -16,7 +16,28 @@ int main()
     White TeamWhite;
     Black TeamBlack;
     
+    //showCH();
+    
+    //TeamWhite.WP4.OptionsPawn();
+    //
+    //for (int i = 0; i < v1.size(); i++) {
+    //
+    //    std::cout << v1[i] << "  ";
+    //    if (i%2 == 1)
+    //        std::cout << std::endl;
+    //}
+    //showCH();
+    
+    TeamWhite.WQ.OptionsQueen();
+    
+    for (int i = 0; i < v1.size(); i++) {
+    
+        std::cout << v1[i] << "  ";
+        if (i%2 == 1)
+            std::cout << std::endl;
+    }
     showCH();
+    
     
     
     return 0;

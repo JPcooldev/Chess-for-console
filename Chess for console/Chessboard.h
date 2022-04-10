@@ -34,6 +34,11 @@
 
 #include <vector>
 
+
+#define RESET       "\033[0m"
+#define BOLDRED     "\033[1m\033[31m"
+#define BOLDGREEN   "\033[1m\033[32m"
+
 extern const int N;
 
 extern int ch[8][8];
@@ -45,11 +50,14 @@ void showCH();
 bool controlCH();
 
 
-extern std::vector<std::vector<int>> v1;
+extern std::vector<int> v1;
 //ulozeni options pro tah dane figurky
 void storeOptions(int x, int y);
 
+//zobrazeni moznosti a vynulovani vektoru v1
+void showOpt();
 
 //void rotateCH(); //otoci hraci desku
+
 
 #endif /* Chessboard_h */

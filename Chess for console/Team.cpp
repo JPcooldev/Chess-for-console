@@ -35,7 +35,7 @@ White::White()
     WN2.initKnight(7, 6, 1);
     WB1.initBishop(7, 2, 1);
     WB2.initBishop(7, 5, 1);
-    WQ.initQueen(7, 3, 1);
+    WQ.initQueen(5, 3, 1);
     WK.initKing(7, 4, 1);
 }
 
@@ -58,4 +58,9 @@ Black::Black()
     BB2.initBishop(0, 5, -1);
     BQ.initQueen(0, 3, -1);
     BK.initKing(0, 4, -1);
+}
+
+void White::OPT()
+{
+    WP4.OptionsPawn();
 }

@@ -16,10 +16,28 @@ void showCH()
 {
     for (int radek = 0; radek < N; radek++)
     {
-        std::cout << N - radek << " |";
+        //std::cout << N - radek << " |";
+        std::cout << radek << " |";
         
         for (int sloupec = 0; sloupec < N; sloupec++)
         {
+            ///*
+            if (!v1.empty()) {
+                //kontrola daneho pole a poli ulozenych ve v1 jako moznosti pohybu (kvuli obarveni)
+                for (int i = 0; i <= v1.size()-2; i += 2) {
+                    if (radek == v1[i]  &&  sloupec == v1[i+1])
+                    {
+                        //obarveni moznosti pohybu
+                        std::cout << BOLDGREEN;
+                        //vymazu pouzite souradnice moznosti
+                        v1.erase(v1.begin() + i);
+                        v1.erase(v1.begin() + i);
+                        break;
+                    }
+                }
+            }
+            //*/
+                
             switch (ch[radek][sloupec])
             {
                 //vypis bilych figurek
@@ -31,7 +49,7 @@ void showCH()
                 case 6: std::cout << "WK" << "  "; break;
                 
                 //vypis prazdnych policek
-                case 0: std::cout << "--" << "  "; break;
+                case 0: std::cout << "==" << "  "; break;
                     
                 //vypis cernych figurek
                 case -1: std::cout << "BP" << "  "; break;
@@ -43,12 +61,15 @@ void showCH()
                
                 default: std::cout << "??" << "  "; break;
             }
+            std::cout << RESET;
         }
         std::cout << std::endl;
     }
     std::cout << "  -------------------------------\n   ";
-    for (int i = 0; i < N; i++)
-        std::cout << char(65+i) << "   ";
+    for (int i = 0; i < N; i++) {
+        //std::cout << char(65+i) << "   ";
+        std::cout << i << "   ";
+    }
     std::cout << std::endl << std::endl;
 }
 
@@ -74,10 +95,16 @@ void rotateCH()
 }
 */
 
-std::vector<std::vector<int>> v1;
+std::vector<int> v1;
 
 void storeOptions(int x, int y)
 {
-    std::vector<int> v2 = {x, y};
-    v1.push_back(v2);
+    v1.push_back(x);
+    v1.push_back(y);
+}
+
+void showOpt()
+{
+    
+    
 }

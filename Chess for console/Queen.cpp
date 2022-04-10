@@ -7,6 +7,7 @@
 
 #include "Queen.h"
 #include "Chessboard.h"
+#include <iostream>
 
 Queen::Queen()
 {
@@ -47,15 +48,17 @@ void Queen::OptionsQueen()
     }
     //i znova inicializuji na 1 do dalsiho while cyklu
     i = 1;
+    
     //zkoumani moznosti right
     while ((ch[x][y+i] == 0  || (ch[x][y+i] < 0 &&  W)  || (ch[x][y+i] > 0 &&  !W)) &&  y+i <= N-1)
     {
         storeOptions(x, y+i);
-        if (ch[x][y+1] != 0)
+        if (ch[x][y+i] != 0)
             break;
         i++;
     }
     i = 1;
+    
     //zkoumani moznosti up
     while ((ch[x-i][y] == 0  || (ch[x-i][y] < 0 &&  W)  || (ch[x-i][y] > 0 &&  !W)) &&  x-i >= 0)
     {
@@ -65,6 +68,7 @@ void Queen::OptionsQueen()
         i++;
     }
     i = 1;
+    
     //zkoumani moznosti down
     while ((ch[x+i][y] == 0  || (ch[x+i][y] < 0 &&  W)  || (ch[x+i][y] > 0 &&  !W)) &&  x+i <= N-1)
     {
@@ -114,4 +118,5 @@ void Queen::OptionsQueen()
             break;
         i++;
     }
+    showOpt();
 }

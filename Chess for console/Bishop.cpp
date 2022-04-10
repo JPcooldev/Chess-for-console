@@ -66,4 +66,5 @@ void Bishop::OptionsBishop()
             break;
         i++;
     }
+    showOpt();
 }

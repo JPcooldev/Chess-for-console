@@ -36,7 +36,7 @@ void Pawn::OptionsPawn()
     
     //pohyb dopredu o 2 pole (jen pri prvnim tahu figurkou)
     //pole +2 vepredu je prazdne a figurka je bez tahu a    jsem na hraci plose
-    if (ch[x-2*value][y] == 0 && !move  &&  ((W  &&  x-1 >= 0)  ||  (!W  &&  x+1 <= N-1)))
+    if (ch[x-2*value][y] == 0  &&  !move  &&  ((W  &&  x-1 >= 0)  ||  (!W  &&  x+1 <= N-1)))
         storeOptions(x-2*value, y);
 
     //utok WHITE (dialgonalne +1 na obe strany)
@@ -59,4 +59,5 @@ void Pawn::OptionsPawn()
         if (ch[x+1][y+1] > 0)
             storeOptions(x+1, y+1);
     }
+    showOpt();
 }

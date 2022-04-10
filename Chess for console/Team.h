@@ -17,6 +17,7 @@
 
 
 class White {
+public:
     Pawn WP1, WP2, WP3, WP4, WP5, WP6, WP7, WP8;
     Rook WR1, WR2;
     Knight WN1, WN2;
@@ -24,8 +25,9 @@ class White {
     Queen WQ;
     King WK;
     
-public:
+//public:
     White();
+    void OPT();
 };
 
 class Black {

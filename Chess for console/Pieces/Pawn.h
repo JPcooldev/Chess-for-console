@@ -10,12 +10,15 @@
 
 
 class Pawn {
-    int x, y;   //lokace na sachovnici
-    int value;  //pro identifikaci barvy a figurky
+    int x, y;       //lokace na sachovnici
+    int value;      //pro identifikaci barvy a figurky
+    bool move;      //pro overeni zda uz figurka udelala tah (true-tah, false-bez tahu)
+    bool W;         //je WHITE = true, je BLACK = false
 public:
     Pawn();
-    void MovePawn(int, int, int);        //pohyb 
-    void OptionsPawn();     //ukazka moznych poli pro tah
+    //~Pawn();
+    void initPawn(int, int, int);       //inicializace
+    void OptionsPawn();                 //ukazka moznych poli pro tah
     
 };
 

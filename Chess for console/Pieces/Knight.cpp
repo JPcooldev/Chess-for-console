@@ -13,9 +13,15 @@ Knight::Knight()
     value = 3;
 }
 
-void Knight::MoveKnight(int x_, int y_, int value_)
+void Knight::initKnight(int x_, int y_, int value_)
 {
-    this->x = x_;
-    this->y = y_;
-    chessboard[x][y] = value*value_;
+    x = x_;
+    y = y_;
+    value = value*value_;
+    ch[x][y] = value;
+}
+
+void OptionsKnight()
+{
+    
 }

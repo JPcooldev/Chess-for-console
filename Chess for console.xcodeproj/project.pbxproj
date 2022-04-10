@@ -49,6 +49,7 @@
 		E85FC58727F8FF5800188160 /* King.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = King.cpp; sourceTree = "<group>"; };
 		E85FC58A27F9016800188160 /* Knight.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Knight.cpp; sourceTree = "<group>"; };
 		E85FC58C27F9017200188160 /* Knight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Knight.h; sourceTree = "<group>"; };
+		E8673D9F28022CA100B72532 /* Game.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +85,7 @@
 				E85FC56327F8C88800188160 /* main.cpp */,
 				E85FC56A27F8C9CB00188160 /* Chessboard.h */,
 				E85FC57027F8CF7100188160 /* Chessboard.cpp */,
+				E8673D9F28022CA100B72532 /* Game.h */,
 				E85FC57B27F8E20A00188160 /* Team.h */,
 				E85FC57A27F8E20A00188160 /* Team.cpp */,
 				E85FC58927F8FF7400188160 /* Pieces */,

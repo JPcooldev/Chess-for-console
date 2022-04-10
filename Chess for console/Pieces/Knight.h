@@ -9,12 +9,13 @@
 #define Knight_h
 
 class Knight {
-    int x, y;   //lokace na sachovnici
-    int value;  //pro identifikaci barvy a figurky
+    int x, y;       //lokace na sachovnici
+    int value;      //pro identifikaci barvy a figurky
+    bool W;         //Knight je WHITE = true, je BLACK = false
 public:
     Knight();
-    void MoveKnight(int, int, int);        //pohyb
-    void OptionsKnight();     //ukazka moznych poli pro tah
+    void initKnight(int, int, int);         //inicializace
+    void OptionsKnight();                   //ukazka moznych poli pro tah
     
 };
 

@@ -11,11 +11,24 @@
 King::King()
 {
     value = 6;
+    move = false;       //zadny tah
 }
 
-void King::MoveKing(int x_, int y_, int value_)
+void King::initKing(int x_, int y_, int value_)
 {
-    this->x = x_;
-    this->y = y_;
-    chessboard[x][y] = value*value_;
+    x = x_;
+    y = y_;
+    value = value*value_;
+    ch[x][y] = value;
+    if (value > 0)
+        W = true;
+    else
+        W = false;
+}
+
+void OptionsKing()
+{
+    //rosada
+    
+    
 }

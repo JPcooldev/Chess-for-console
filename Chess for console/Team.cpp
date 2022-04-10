@@ -20,40 +20,42 @@
 
 White::White()
 {
-    WP1.MovePawn(6, 0, 1);
-    WP2.MovePawn(6, 1, 1);
-    WP3.MovePawn(6, 2, 1);
-    WP4.MovePawn(6, 3, 1);
-    WP5.MovePawn(6, 4, 1);
-    WP6.MovePawn(6, 5, 1);
-    WP7.MovePawn(6, 6, 1);
-    WP8.MovePawn(6, 7, 1);
-    WR1.MoveRook(7, 0, 1);
-    WR2.MoveRook(7, 7, 1);
-    WN1.MoveKnight(7, 1, 1);
-    WN2.MoveKnight(7, 6, 1);
-    WB1.MoveBishop(7, 2, 1);
-    WB2.MoveBishop(7, 5, 1);
-    WQ.MoveQueen(7, 3, 1);
-    WK.MoveKing(7, 4, 1);
+    //inicializace WHITE
+    WP1.initPawn(6, 0, 1);
+    WP2.initPawn(6, 1, 1);
+    WP3.initPawn(6, 2, 1);
+    WP4.initPawn(6, 3, 1);
+    WP5.initPawn(6, 4, 1);
+    WP6.initPawn(6, 5, 1);
+    WP7.initPawn(6, 6, 1);
+    WP8.initPawn(6, 7, 1);
+    WR1.initRook(7, 0, 1);
+    WR2.initRook(7, 7, 1);
+    WN1.initKnight(7, 1, 1);
+    WN2.initKnight(7, 6, 1);
+    WB1.initBishop(7, 2, 1);
+    WB2.initBishop(7, 5, 1);
+    WQ.initQueen(7, 3, 1);
+    WK.initKing(7, 4, 1);
 }
 
 Black::Black()
 {
-    BP1.MovePawn(1, 0, -1);
-    BP2.MovePawn(1, 1, -1);
-    BP3.MovePawn(1, 2, -1);
-    BP4.MovePawn(1, 3, -1);
-    BP5.MovePawn(1, 4, -1);
-    BP6.MovePawn(1, 5, -1);
-    BP7.MovePawn(1, 6, -1);
-    BP8.MovePawn(1, 7, -1);
-    BR1.MoveRook(0, 0, -1);
-    BR2.MoveRook(0, 7, -1);
-    BN1.MoveKnight(0, 1, -1);
-    BN2.MoveKnight(0, 6, -1);
-    BB1.MoveBishop(0, 2, -1);
-    BB2.MoveBishop(0, 5, -1);
-    BQ.MoveQueen(0, 3, -1);
-    BK.MoveKing(0, 4, -1);
+    //inicializace BLACK
+    BP1.initPawn(1, 0, -1);
+    BP2.initPawn(1, 1, -1);
+    BP3.initPawn(1, 2, -1);
+    BP4.initPawn(1, 3, -1);
+    BP5.initPawn(1, 4, -1);
+    BP6.initPawn(1, 5, -1);
+    BP7.initPawn(1, 6, -1);
+    BP8.initPawn(1, 7, -1);
+    BR1.initRook(0, 0, -1);
+    BR2.initRook(0, 7, -1);
+    BN1.initKnight(0, 1, -1);
+    BN2.initKnight(0, 6, -1);
+    BB1.initBishop(0, 2, -1);
+    BB2.initBishop(0, 5, -1);
+    BQ.initQueen(0, 3, -1);
+    BK.initKing(0, 4, -1);
 }

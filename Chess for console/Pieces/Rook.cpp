@@ -11,11 +11,67 @@
 Rook::Rook()
 {
     value = 2;
+    move = false;   //bez pohybu (kvuli moznosti rosady)
 }
 
-void Rook::MoveRook(int x_, int y_, int value_)
+void Rook::initRook(int x_, int y_, int value_)
 {
-    this->x = x_;
-    this->y = y_;
-    chessboard[x][y] = value*value_;
+    x = x_;
+    y = y_;
+    value = value*value_;
+    ch[x][y] = value;
+    if (value > 0)
+        W = true;
+    else
+        W = false;
+}
+
+void Rook::OptionsRook()
+{
+    //rosada (pouze kdyz se netahlo s King ani Rook a mezi nimi nestoji zadna figurka)
+    //if () {
+    //
+    //}
+    
+    int i = 1;
+    //zkoumani moznosti left
+    //zkontroluji pole nalevo, pokud je mozny pohyb tak jej ulozim do vector v1 (moznosti pohybu) a koukam zase vedle
+    //pokud je pole vedle obsazeno figurkou stejneho tymu cyklus while se ani neuskutecni
+    //pole left je  prazdne         obsazeno cernou           obsazeno bilou        a jsem na hraci plose
+    while ((ch[x][y-i] == 0  || (ch[x][y-i] < 0 &&  W)  || (ch[x][y-i] > 0 &&  !W)) &&  y-i >= 0)
+    {
+        storeOptions(x, y-i);
+        //vedle Rook je figurka a nemuzu zkoumat dalsi pole
+        if (ch[x][y-i] != 0)
+            break;
+        i++;
+    }
+    //i znova inicializuji na 1 do dalsiho while cyklu
+    i = 1;
+    //zkoumani moznosti right
+    while ((ch[x][y+i] == 0  || (ch[x][y+i] < 0 &&  W)  || (ch[x][y+i] > 0 &&  !W)) &&  y+i <= N-1)
+    {
+        storeOptions(x, y+i);
+        if (ch[x][y+1] != 0)
+            break;
+        i++;
+    }
+    i = 1;
+    //zkoumani moznosti up
+    while ((ch[x-i][y] == 0  || (ch[x-i][y] < 0 &&  W)  || (ch[x-i][y] > 0 &&  !W)) &&  x-i >= 0)
+    {
+        storeOptions(x-i, y);
+        if (ch[x-i][y] != 0)
+            break;
+        i++;
+    }
+    i = 1;
+    //zkoumani moznosti down
+    while ((ch[x+i][y] == 0  || (ch[x+i][y] < 0 &&  W)  || (ch[x+i][y] > 0 &&  !W)) &&  x+i <= N-1)
+    {
+        storeOptions(x+i, y);
+        if (ch[x+i][y] != 0)
+            break;
+        i++;
+    }
 }

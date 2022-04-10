@@ -9,12 +9,13 @@
 #define Queen_h
 
 class Queen {
-    int x, y;   //lokace na sachovnici
-    int value;  //pro identifikaci barvy a figurky
+    int x, y;       //lokace na sachovnici
+    int value;      //pro identifikaci barvy a figurky
+    bool W;         // je WHITE = true, je BLACK = false
 public:
     Queen();
-    void MoveQueen(int, int, int);        //pohyb
-    void OptionsQueen();     //ukazka moznych poli pro tah
+    void initQueen(int, int, int);         //inicializace
+    void OptionsQueen();                   //ukazka moznych poli pro tah
     
 };
 

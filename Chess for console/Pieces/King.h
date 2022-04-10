@@ -9,12 +9,14 @@
 #define King_h
 
 class King {
-    int x, y;   //lokace na sachovnici
-    int value;  //pro identifikaci barvy a figurky
+    int x, y;       //lokace na sachovnici
+    int value;      //pro identifikaci barvy a figurky
+    bool move;      //pro overeni zda uz figurka udelala tah (true = tah, false = bez tahu)
+    bool W;         //je WHITE = true, je BLACK = false
 public:
     King();
-    void MoveKing(int, int, int);        //pohyb
-    void OptionsKing();     //ukazka moznych poli pro tah
+    void initKing(int, int, int);       //inicializace
+    void OptionsKing();                 //ukazka moznych poli pro tah
     
 };
 

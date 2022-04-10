@@ -11,9 +11,11 @@
 class Rook {
     int x, y;   //lokace na sachovnici
     int value;  //pro identifikaci barvy a figurky
+    bool move;  //uz tahla = true, jeste netahla = false
+    bool W;     //Rook je WHITE = true, je BLACK = false
 public:
     Rook();
-    void MoveRook(int, int, int);        //pohyb
+    void initRook(int, int, int);        //pohyb
     void OptionsRook();     //ukazka moznych poli pro tah
     
 };

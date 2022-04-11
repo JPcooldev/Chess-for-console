@@ -16,7 +16,7 @@ public:
     Knight();
     void initKnight(int, int, int);         //inicializace
     void OptionsKnight();                   //ukazka moznych poli pro tah
-    
+    void moveN(int, int);                   //move podle souradnic
 };
 
 

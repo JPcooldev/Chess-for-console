@@ -7,7 +7,6 @@
 
 #include "Queen.h"
 #include "Chessboard.h"
-#include <iostream>
 
 Queen::Queen()
 {

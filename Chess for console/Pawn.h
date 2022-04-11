@@ -19,6 +19,7 @@ public:
     //~Pawn();
     void initPawn(int, int, int);       //inicializace
     void OptionsPawn();                 //ukazka moznych poli pro tah
+    void moveP(int, int);               //move podle souradnic
     
 };
 

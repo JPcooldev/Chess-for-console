@@ -61,3 +61,8 @@ void Pawn::OptionsPawn()
     }
     showOpt();
 }
+
+void moveP(int x, int y)
+{
+    
+}

@@ -17,7 +17,7 @@ public:
     Rook();
     void initRook(int, int, int);        //pohyb
     void OptionsRook();     //ukazka moznych poli pro tah
-    
+    void moveR(int, int);               //move podle souradnic
 };
 
 #endif /* Rook_h */

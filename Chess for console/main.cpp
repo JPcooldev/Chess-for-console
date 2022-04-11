@@ -21,20 +21,17 @@
 
 int main()
 {
-    White TeamWhite;
-    Black TeamBlack;
-    
-    //showCH();
-    
-    TeamWhite.WN1.OptionsKnight();
-    
+    Game Hra;
+    Hra.play();
+    /*
     for (int i = 0; i < v1.size(); i++) {
     
         std::cout << v1[i] << "  ";
         if (i%2 == 1)
             std::cout << std::endl;
     }
-    showCH();
+     */
+    //showCH();
     
     
     

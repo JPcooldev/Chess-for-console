@@ -17,46 +17,48 @@
 
 #include "Team.h"
 
-
-White::White()
-{
-    //inicializace WHITE
-    WP1.initPawn(6, 0, 1);
-    WP2.initPawn(6, 1, 1);
-    WP3.initPawn(6, 2, 1);
-    WP4.initPawn(6, 3, 1);
-    WP5.initPawn(6, 4, 1);
-    WP6.initPawn(6, 5, 1);
-    WP7.initPawn(6, 6, 1);
-    WP8.initPawn(6, 7, 1);
-    WR1.initRook(7, 0, 1);
-    WR2.initRook(7, 7, 1);
-    WN1.initKnight(7, 1, 1);
-    WN2.initKnight(7, 6, 1);
-    WB1.initBishop(7, 2, 1);
-    WB2.initBishop(7, 5, 1);
-    WQ.initQueen(5, 3, 1);
-    WK.initKing(7, 4, 1);
+Team::Team() {
+    //nic se nedeje 
 }
 
-Black::Black()
+void Team::initT(int a)
 {
-    //inicializace BLACK
-    BP1.initPawn(1, 0, -1);
-    BP2.initPawn(1, 1, -1);
-    BP3.initPawn(1, 2, -1);
-    BP4.initPawn(1, 3, -1);
-    BP5.initPawn(1, 4, -1);
-    BP6.initPawn(1, 5, -1);
-    BP7.initPawn(1, 6, -1);
-    BP8.initPawn(1, 7, -1);
-    BR1.initRook(0, 0, -1);
-    BR2.initRook(0, 7, -1);
-    BN1.initKnight(0, 1, -1);
-    BN2.initKnight(0, 6, -1);
-    BB1.initBishop(0, 2, -1);
-    BB2.initBishop(0, 5, -1);
-    BQ.initQueen(0, 3, -1);
-    BK.initKing(0, 4, -1);
+    if (a == 1) {
+        //inicializace WHITE
+        P1.initPawn(6, 0, 1);
+        P2.initPawn(6, 1, 1);
+        P3.initPawn(6, 2, 1);
+        P4.initPawn(6, 3, 1);
+        P5.initPawn(6, 4, 1);
+        P6.initPawn(6, 5, 1);
+        P7.initPawn(6, 6, 1);
+        P8.initPawn(6, 7, 1);
+        R1.initRook(7, 0, 1);
+        R2.initRook(7, 7, 1);
+        N1.initKnight(7, 1, 1);
+        N2.initKnight(7, 6, 1);
+        B1.initBishop(7, 2, 1);
+        B2.initBishop(7, 5, 1);
+        Q.initQueen(7, 3, 1);
+        K.initKing(7, 4, 1);
+    }
+    if (a == -1) {
+        //inicializace BLACK
+        P1.initPawn(1, 0, -1);
+        P2.initPawn(1, 1, -1);
+        P3.initPawn(1, 2, -1);
+        P4.initPawn(1, 3, -1);
+        P5.initPawn(1, 4, -1);
+        P6.initPawn(1, 5, -1);
+        P7.initPawn(1, 6, -1);
+        P8.initPawn(1, 7, -1);
+        R1.initRook(0, 0, -1);
+        R2.initRook(0, 7, -1);
+        N1.initKnight(0, 1, -1);
+        N2.initKnight(0, 6, -1);
+        B1.initBishop(0, 2, -1);
+        B2.initBishop(0, 5, -1);
+        Q.initQueen(0, 3, -1);
+        K.initKing(0, 4, -1);
+    }
 }
-

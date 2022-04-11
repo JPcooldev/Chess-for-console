@@ -16,6 +16,7 @@
 		E85FC58627F8FF4D00188160 /* Queen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E85FC58527F8FF4D00188160 /* Queen.cpp */; };
 		E85FC58827F8FF5800188160 /* King.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E85FC58727F8FF5800188160 /* King.cpp */; };
 		E85FC58B27F9016800188160 /* Knight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E85FC58A27F9016800188160 /* Knight.cpp */; };
+		E8FC1E342804BC9800F6C2A4 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8FC1E332804BC9800F6C2A4 /* Game.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -50,6 +51,7 @@
 		E85FC58A27F9016800188160 /* Knight.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Knight.cpp; sourceTree = "<group>"; };
 		E85FC58C27F9017200188160 /* Knight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Knight.h; sourceTree = "<group>"; };
 		E8673D9F28022CA100B72532 /* Game.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		E8FC1E332804BC9800F6C2A4 /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,10 +84,11 @@
 		E85FC56227F8C88800188160 /* Chess for console */ = {
 			isa = PBXGroup;
 			children = (
-				E8673D9F28022CA100B72532 /* Game.h */,
 				E85FC56327F8C88800188160 /* main.cpp */,
 				E85FC56A27F8C9CB00188160 /* Chessboard.h */,
 				E85FC57027F8CF7100188160 /* Chessboard.cpp */,
+				E8673D9F28022CA100B72532 /* Game.h */,
+				E8FC1E332804BC9800F6C2A4 /* Game.cpp */,
 				E85FC57B27F8E20A00188160 /* Team.h */,
 				E85FC57A27F8E20A00188160 /* Team.cpp */,
 				E85FC56F27F8CB3300188160 /* Pawn.h */,
@@ -178,6 +181,7 @@
 				E85FC57727F8D61900188160 /* Chessboard.cpp in Sources */,
 				E85FC57927F8D61900188160 /* Pawn.cpp in Sources */,
 				E85FC58627F8FF4D00188160 /* Queen.cpp in Sources */,
+				E8FC1E342804BC9800F6C2A4 /* Game.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

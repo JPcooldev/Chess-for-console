@@ -17,7 +17,7 @@ public:
     King();
     void initKing(int, int, int);       //inicializace
     void OptionsKing();                 //ukazka moznych poli pro tah
-    
+    void moveK(int, int);               //move podle souradnic
 };
 
 #endif /* King_h */

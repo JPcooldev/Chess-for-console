@@ -16,7 +16,7 @@ public:
     Queen();
     void initQueen(int, int, int);         //inicializace
     void OptionsQueen();                   //ukazka moznych poli pro tah
-    
+    void moveQ(int, int);                   //move podle souradnic
 };
 
 #endif /* Queen_h */

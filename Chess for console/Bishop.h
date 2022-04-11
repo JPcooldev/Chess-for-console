@@ -16,7 +16,7 @@ public:
     Bishop();
     void initBishop(int, int, int);         //inicializace
     void OptionsBishop();                   //ukazka moznych poli pro tah
-    
+    void moveB(int, int);                   //move podle souradnic
 };
 
 #endif /* Bishop_h */

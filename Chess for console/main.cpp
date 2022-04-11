@@ -4,10 +4,18 @@
 //
 //  Created by Jakub Prokop on 02.04.2022.
 //
+/*  CHYBI!!!
+ *  en passant
+ *  promena pawn na jinou figurku (R, B, N, Q) pri dosazeni posledniho pole
+ *  rosada
+ *  
+ *
+ */
 
 #include <iostream>
 #include "Chessboard.h"
-#include "Team.h"
+#include "Game.h"
+
 
 
 
@@ -18,17 +26,7 @@ int main()
     
     //showCH();
     
-    //TeamWhite.WP4.OptionsPawn();
-    //
-    //for (int i = 0; i < v1.size(); i++) {
-    //
-    //    std::cout << v1[i] << "  ";
-    //    if (i%2 == 1)
-    //        std::cout << std::endl;
-    //}
-    //showCH();
-    
-    TeamWhite.WQ.OptionsQueen();
+    TeamWhite.WN1.OptionsKnight();
     
     for (int i = 0; i < v1.size(); i++) {
     

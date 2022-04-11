@@ -27,7 +27,6 @@ public:
     
 //public:
     White();
-    void OPT();
 };
 
 class Black {

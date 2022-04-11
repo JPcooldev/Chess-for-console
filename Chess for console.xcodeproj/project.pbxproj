@@ -82,10 +82,10 @@
 		E85FC56227F8C88800188160 /* Chess for console */ = {
 			isa = PBXGroup;
 			children = (
+				E8673D9F28022CA100B72532 /* Game.h */,
 				E85FC56327F8C88800188160 /* main.cpp */,
 				E85FC56A27F8C9CB00188160 /* Chessboard.h */,
 				E85FC57027F8CF7100188160 /* Chessboard.cpp */,
-				E8673D9F28022CA100B72532 /* Game.h */,
 				E85FC57B27F8E20A00188160 /* Team.h */,
 				E85FC57A27F8E20A00188160 /* Team.cpp */,
 				E85FC56F27F8CB3300188160 /* Pawn.h */,

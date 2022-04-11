@@ -8,5 +8,13 @@
 #ifndef Game_h
 #define Game_h
 
+#include "Team.h"
+
+class Game {
+    
+    
+public:
+    ;
+};
 
 #endif /* Game_h */

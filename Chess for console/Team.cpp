@@ -60,7 +60,3 @@ Black::Black()
     BK.initKing(0, 4, -1);
 }
 
-void White::OPT()
-{
-    WP4.OptionsPawn();
-}

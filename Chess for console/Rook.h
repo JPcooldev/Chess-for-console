@@ -15,9 +15,9 @@ class Rook {
     bool W;     //Rook je WHITE = true, je BLACK = false
 public:
     Rook();
-    void initRook(int, int, int);        //pohyb
-    void OptionsRook();     //ukazka moznych poli pro tah
-    void moveR(int, int);               //move podle souradnic
+    void initRook(int, int, int, bool);         //inicializace x,y, value, W
+    void OptionsRook();                         //ukazka moznych poli pro tah
+    void moveR(int, int);                       //move podle souradnic
 };
 
 #endif /* Rook_h */

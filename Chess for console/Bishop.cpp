@@ -10,19 +10,15 @@
 
 Bishop::Bishop()
 {
-    value = 4;
 }
 
-void Bishop::initBishop(int x_, int y_, int value_)
+void Bishop::initBishop(int x_, int y_, int value_, bool W_)
 {
     x = x_;
     y = y_;
-    value = value*value_;
+    value = value_;
     ch[x][y] = value;
-    if (value > 0)
-        W = true;
-    else
-        W = false;
+    W = W_;
 }
 
 void Bishop::OptionsBishop()
@@ -66,5 +62,12 @@ void Bishop::OptionsBishop()
             break;
         i++;
     }
-    showOpt();
+    //showOpt();
+}
+
+void Bishop::moveB(int x_, int y_)
+{
+    x = x_;
+    y = y_;
+    
 }

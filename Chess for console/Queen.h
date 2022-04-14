@@ -14,9 +14,9 @@ class Queen {
     bool W;         // je WHITE = true, je BLACK = false
 public:
     Queen();
-    void initQueen(int, int, int);         //inicializace
-    void OptionsQueen();                   //ukazka moznych poli pro tah
-    void moveQ(int, int);                   //move podle souradnic
+    void initQueen(int, int, int, bool);        //inicializace x,y, value, W
+    void OptionsQueen();                        //ukazka moznych poli pro tah
+    void moveQ(int, int);                       //move podle souradnic
 };
 
 #endif /* Queen_h */

@@ -24,12 +24,12 @@ class Team {
     Bishop B1, B2;
     Queen Q;
     King K;
-    //zbytecne
-    //int Tvalue;         //nastaveni hodnoty, 1 = White, -1 = Black
     
 public:
     Team();
-    void initT(int);
+    void initT(int);        //inicializace
+    void optT(int, int);    //kontrola zda hrac saha po figurce sveho tymu a nasledna kontrola, zda zvolil legalni pole pro nasledujici tah
+    void moveT(int, int, int, int);    //pohyb
 };
 
 

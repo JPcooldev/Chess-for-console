@@ -17,9 +17,9 @@ class Pawn {
 public:
     Pawn();
     //~Pawn();
-    void initPawn(int, int, int);       //inicializace
-    void OptionsPawn();                 //ukazka moznych poli pro tah
-    void moveP(int, int);               //move podle souradnic
+    void initPawn(int, int, int, bool);         //inicializace x,y, value, W
+    void OptionsPawn();                         //ukazka moznych poli pro tah
+    void moveP(int, int);                       //move podle souradnic
     
 };
 

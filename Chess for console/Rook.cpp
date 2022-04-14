@@ -10,20 +10,16 @@
 
 Rook::Rook()
 {
-    value = 2;
     move = false;   //bez pohybu (kvuli moznosti rosady)
 }
 
-void Rook::initRook(int x_, int y_, int value_)
+void Rook::initRook(int x_, int y_, int value_, bool W_)
 {
     x = x_;
     y = y_;
-    value = value*value_;
+    value = value_;
     ch[x][y] = value;
-    if (value > 0)
-        W = true;
-    else
-        W = false;
+    W = W_;
 }
 
 void Rook::OptionsRook()
@@ -77,5 +73,12 @@ void Rook::OptionsRook()
             break;
         i++;
     }
-    showOpt();
+    //showOpt();
+}
+
+void Rook::moveR(int x_, int y_)
+{
+    x = x_;
+    y = y_;
+    
 }

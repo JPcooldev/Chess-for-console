@@ -16,8 +16,8 @@ void showCH()
 {
     for (int radek = 0; radek < N; radek++)
     {
-        //std::cout << N - radek << " |";
-        std::cout << radek << " |";
+        std::cout << N - radek << " |";
+        //std::cout << radek << " |";
         
         for (int sloupec = 0; sloupec < N; sloupec++)
         {
@@ -29,6 +29,7 @@ void showCH()
                     {
                         //obarveni moznosti pohybu
                         std::cout << BOLDGREEN;
+                        //std::cout << "-";
                         //vymazu pouzite souradnice moznosti
                         v1.erase(v1.begin() + i);
                         v1.erase(v1.begin() + i);
@@ -37,38 +38,49 @@ void showCH()
                 }
             }
             //*/
-                
-            switch (ch[radek][sloupec])
-            {
-                //vypis bilych figurek
-                case 1: std::cout << "WP" << "  "; break;
-                case 2: std::cout << "WR" << "  "; break;
-                case 3: std::cout << "WN" << "  "; break;
-                case 4: std::cout << "WB" << "  "; break;
-                case 5: std::cout << "WQ" << "  "; break;
-                case 6: std::cout << "WK" << "  "; break;
-                
-                //vypis prazdnych policek
-                case 0: std::cout << "==" << "  "; break;
-                    
-                //vypis cernych figurek
-                case -1: std::cout << "BP" << "  "; break;
-                case -2: std::cout << "BR" << "  "; break;
-                case -3: std::cout << "BN" << "  "; break;
-                case -4: std::cout << "BB" << "  "; break;
-                case -5: std::cout << "BQ" << "  "; break;
-                case -6: std::cout << "BK" << "  "; break;
-               
-                default: std::cout << "??" << "  "; break;
-            }
+            //vypis prazdnych policek
+            if (ch[radek][sloupec] >= -10 && ch[radek][sloupec] <= 10)
+                std::cout << "==" << "  ";
+            
+            //vypis bilych figurek
+            else if (ch[radek][sloupec] >= 10 && ch[radek][sloupec] <= 20)
+                std::cout << "WP" << "  ";
+            else if (ch[radek][sloupec] >= 20 && ch[radek][sloupec] <= 30)
+                std::cout << "WR" << "  ";
+            else if (ch[radek][sloupec] >= 30 && ch[radek][sloupec] <= 40)
+                std::cout << "WN" << "  ";
+            else if (ch[radek][sloupec] >= 40 && ch[radek][sloupec] <= 50)
+                std::cout << "WB" << "  ";
+            else if (ch[radek][sloupec] >= 50 && ch[radek][sloupec] < 60)
+                std::cout << "WQ" << "  ";
+            else if (ch[radek][sloupec] == 60)
+                std::cout << "WK" << "  ";
+            
+            //vypis cernych figurek
+            else if (ch[radek][sloupec] >= -20 && ch[radek][sloupec] <= -10)
+                std::cout << "BP" << "  ";
+            else if (ch[radek][sloupec] >= -30 && ch[radek][sloupec] <= -20)
+                std::cout << "BR" << "  ";
+            else if (ch[radek][sloupec] >= -40 && ch[radek][sloupec] <= -30)
+                std::cout << "BN" << "  ";
+            else if (ch[radek][sloupec] >= -50 && ch[radek][sloupec] <= -40)
+                std::cout << "BB" << "  ";
+            else if (ch[radek][sloupec] > -60 && ch[radek][sloupec] <= -50)
+                std::cout << "BQ" << "  ";
+            else if (ch[radek][sloupec] == -60)
+                std::cout << "BK" << "  ";
+            
+            else
+                std::cout << "??" << "  ";
+          
             std::cout << RESET;
         }
         std::cout << std::endl;
     }
     std::cout << "  -------------------------------\n   ";
     for (int i = 0; i < N; i++) {
-        //std::cout << char(65+i) << "   ";
-        std::cout << i << "   ";
+        std::cout << char(65+i) << "   ";
+        //std::cout << i << "   ";
     }
     std::cout << std::endl << std::endl;
 }
@@ -103,8 +115,28 @@ void storeOptions(int x, int y)
     v1.push_back(y);
 }
 
-void showOpt()
+int char_on_int(char z)          //prevedeni char na int
 {
-    
-    
+    int a;
+    switch (z) {
+        case 'a': { a = 0; break; }
+        case 'b': { a = 1; break; }
+        case 'c': { a = 2; break; }
+        case 'd': { a = 3; break; }
+        case 'e': { a = 4; break; }
+        case 'f': { a = 5; break; }
+        case 'g': { a = 6; break; }
+        case 'h': { a = 7; break; }
+        case '1': { a = 7; break; }
+        case '2': { a = 6; break; }
+        case '3': { a = 5; break; }
+        case '4': { a = 4; break; }
+        case '5': { a = 3; break; }
+        case '6': { a = 2; break; }
+        case '7': { a = 1; break; }
+        case '8': { a = 0; break; }
+            
+        default: (char)a; break; //kdyz je char = '\n' tak takhle zustane
+    }
+    return a;
 }

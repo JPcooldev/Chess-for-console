@@ -14,9 +14,9 @@ class Knight {
     bool W;         //Knight je WHITE = true, je BLACK = false
 public:
     Knight();
-    void initKnight(int, int, int);         //inicializace
-    void OptionsKnight();                   //ukazka moznych poli pro tah
-    void moveN(int, int);                   //move podle souradnic
+    void initKnight(int, int, int, bool);           //inicializace x,y, value, W
+    void OptionsKnight();                           //ukazka moznych poli pro tah
+    void moveN(int, int);                           //move podle souradnic
 };
 
 

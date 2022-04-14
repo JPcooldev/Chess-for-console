@@ -10,20 +10,17 @@
 
 Queen::Queen()
 {
-    value = 5;
 }
 
-void Queen::initQueen(int x_, int y_, int value_)
+void Queen::initQueen(int x_, int y_, int value_, bool W_)
 {
     x = x_;
     y = y_;
-    value = value*value_;
+    value = value_;
     ch[x][y] = value;
-    if (value > 0)
-        W = true;
-    else
-        W = false;
+    W = W_;
 }
+
 
 void Queen::OptionsQueen()
 {
@@ -117,5 +114,12 @@ void Queen::OptionsQueen()
             break;
         i++;
     }
-    showOpt();
+    //showOpt();
+}
+
+void Queen::moveQ(int x_, int y_)
+{
+    x = x_;
+    y = y_;
+    
 }

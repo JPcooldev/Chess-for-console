@@ -23,6 +23,14 @@ int main()
 {
     Game Hra;
     Hra.play();
+    //for (int i = 0; i < A; i++) {
+    //    cout << k;
+    //    getchar();
+    //    k++;
+    //}
+    //
+    //cout << "AHOJ\n";
+    
     /*
     for (int i = 0; i < v1.size(); i++) {
     

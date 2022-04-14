@@ -9,12 +9,12 @@
  *  ch[i][j] > 0    v poli se nachazi bila figurka
  *  ch[i][j] < 0    v poli se nachazi cerna figurka
  *
- * +- 1 (P) pawn
- * +- 2 (R) rook
- * +- 3 (N) knight
- * +- 4 (B) bishop
- * +- 5 (Q) queen
- * +- 6 (K) king
+ * +- 11-18 (P) pawn
+ * +- 21-22 (R) rook
+ * +- 31-32 (N) knight
+ * +- 41-42 (B) bishop
+ * +- 50 (Q) queen
+ * +- 60 (K) king
  *
  *
  *   BR1 BN1 BB1 BQ  BK  BB2 BN2 BR2        00 01 02 03 04 05 06 07
@@ -58,5 +58,6 @@ void showOpt();
 
 //void rotateCH(); //otoci hraci desku
 
+int char_on_int(char z);
 
 #endif /* Chessboard_h */

@@ -15,7 +15,7 @@ class King {
     bool W;         //je WHITE = true, je BLACK = false
 public:
     King();
-    void initKing(int, int, int);       //inicializace
+    void initKing(int, int, int, bool);       //inicializace x,y, value, W
     void OptionsKing();                 //ukazka moznych poli pro tah
     void moveK(int, int);               //move podle souradnic
 };

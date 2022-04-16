@@ -43,7 +43,7 @@ void Pawn::OptionsPawn()
         if (!W)
             storeOptions(x+2, y);
     }
-    //utok WHITE (dialgonalne +1 na obe strany)
+    //utok WHITE (dialgonalne -1 na obe strany)
     //       up  left              up  right   a figurka je W     a jsem na hraci plose
     if ((ch[x-1][y-1] < 0  ||  ch[x-1][y+1] < 0) &&  W  &&  x-1 >= 0  &&  y-1 >= 0  &&  y+1 <= N-1)
     {
@@ -54,7 +54,7 @@ void Pawn::OptionsPawn()
             storeOptions(x-1, y+1);
     }
     
-    //utok BLACK (dialgonalne -1 na obe strany)
+    //utok BLACK (dialgonalne +1 na obe strany)
     //     down left             down right    a figurka je B     a jsem na hraci plose
     if ((ch[x+1][y-1] > 0  ||  ch[x+1][y+1] > 0) &&  !W  &&  x+1 <= N-1  &&  y-1 >= 0  &&  y+1 <= N-1)
     {
@@ -63,7 +63,6 @@ void Pawn::OptionsPawn()
         if (ch[x+1][y+1] > 0)
             storeOptions(x+1, y+1);
     }
-    //showOpt();
 }
 
 //zmena lokace figurky
@@ -72,5 +71,11 @@ void Pawn::moveP(int x_, int y_)
     ch[x][y] = 0;
     x = x_;
     y = y_;
-    ch[x][y] = value;
+    if ((x == 0 && W)  ||  (x == N-1 && !W)) {
+        value = 50;
+        ch[x][y] = value;
+    }
+    else {
+        ch[x][y] = value;
+    }
 }

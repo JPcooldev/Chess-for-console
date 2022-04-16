@@ -68,7 +68,7 @@ void Team::initT(int a)
 //kontrola zda hrac saha po figurce sveho tymu a nasledna kontrola, zda zvolil legalni pole pro nasledujici tah
 void Team::optT(int x_, int y_)
 {
-    int tmp = ch[x_][y_];
+    int tmp = std::abs(ch[x_][y_]);
     
     switch (tmp) {
         case 11: P1.OptionsPawn(); break;
@@ -119,3 +119,4 @@ void Team::moveT(int x0, int y0, int x1, int y1)
             break;
     }
 }
+ 

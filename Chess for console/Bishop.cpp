@@ -67,7 +67,8 @@ void Bishop::OptionsBishop()
 
 void Bishop::moveB(int x_, int y_)
 {
+    ch[x][y] = 0;
     x = x_;
     y = y_;
-    
+    ch[x][y] = value;
 }

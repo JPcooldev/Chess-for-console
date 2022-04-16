@@ -34,6 +34,7 @@
 
 #include <vector>
 
+
 #define RESET       "\033[0m"
 #define BOLDRED     "\033[1m\033[31m"
 #define BOLDGREEN   "\033[1m\033[32m"
@@ -42,19 +43,15 @@ extern const int N;
 
 extern int ch[8][8];
 
-//vypis sachovnice
-void showCH();
+extern int moves;           //pocet provedenych tahu (sudy hraje W, lichy hraje B) (zacinam od 0)
 
-//kontrola lokace na sachovnici
-bool controlCH();
-
+void showCH();              //vypis sachovnice
 
 extern std::vector<int> v1;
-//ulozeni options pro tah dane figurky
-void storeOptions(int x, int y);
 
-//zobrazeni moznosti a vynulovani vektoru v1
-void showOpt();
+extern std::vector<int> vec;
+
+void storeOptions(int x, int y);        //ulozeni options pro tah dane figurky
 
 //void rotateCH(); //otoci hraci desku
 

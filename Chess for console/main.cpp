@@ -8,7 +8,8 @@
  *  en passant
  *  promena pawn na jinou figurku (R, B, N, Q) pri dosazeni posledniho pole
  *  rosada
- *  
+ *  pocitani tahu figurek
+ * zvyraznim mozne figurky pro tah
  *
  */
 
@@ -23,25 +24,6 @@ int main()
 {
     Game Hra;
     Hra.play();
-    //for (int i = 0; i < A; i++) {
-    //    cout << k;
-    //    getchar();
-    //    k++;
-    //}
-    //
-    //cout << "AHOJ\n";
-    
-    /*
-    for (int i = 0; i < v1.size(); i++) {
-    
-        std::cout << v1[i] << "  ";
-        if (i%2 == 1)
-            std::cout << std::endl;
-    }
-     */
-    //showCH();
-    
-    
-    
+
     return 0;
 }

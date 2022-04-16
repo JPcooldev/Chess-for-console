@@ -11,11 +11,11 @@
 #include <iostream>
 
 #include "Team.h"
+#include "Chessboard.h"
 
 
 class Game {
     Team White, Black;      //vytvoreni tymu
-    int moves;              //pocet provedenych tahu (sudy hraje W, lichy hraje B) (zacinam od 0)
     
 public:
     Game();

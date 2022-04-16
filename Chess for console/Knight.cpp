@@ -68,7 +68,8 @@ void Knight::OptionsKnight()
 
 void Knight::moveN(int x_, int y_)
 {
+    ch[x][y] = 0;
     x = x_;
     y = y_;
-    
+    ch[x][y] = value;
 }

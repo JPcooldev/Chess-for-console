@@ -6,11 +6,18 @@
 //
 
 #include "Chessboard.h"
+#include "Game.h"
 #include <iostream>
 
 const int N = 8;
 
 int ch[8][8] = { 0 };
+
+std::vector<int> v1;
+
+std::vector<int> vec;
+
+int moves;
 
 void showCH()
 {
@@ -22,6 +29,11 @@ void showCH()
         for (int sloupec = 0; sloupec < N; sloupec++)
         {
             ///*
+            
+            // obarveni figurek ktere si mohu zvolit k tahu
+            if (vec.empty()  &&  ((ch[radek][sloupec] > 0  &&  moves%2 == 0) || (ch[radek][sloupec] < 0  &&  moves%2 == 1)))
+                std::cout << BOLDRED;
+            
             if (!v1.empty()) {
                 //kontrola daneho pole a poli ulozenych ve v1 jako moznosti pohybu (kvuli obarveni)
                 for (int i = 0; i <= v1.size()-2; i += 2) {
@@ -29,10 +41,19 @@ void showCH()
                     {
                         //obarveni moznosti pohybu
                         std::cout << BOLDGREEN;
-                        //std::cout << "-";
                         //vymazu pouzite souradnice moznosti
                         v1.erase(v1.begin() + i);
                         v1.erase(v1.begin() + i);
+                        break;
+                    }
+                }
+            }
+            if (!vec.empty()) {
+                //kontrola vybrane figurky se sachovnici (kvuli obarveni)
+                for (int i = 0; i <= vec.size()-2; i += 2) {
+                    if (radek == vec[i+1]  &&  sloupec == vec[i])
+                    {                        //obarveni moznosti pohybu
+                        std::cout << BOLDRED;
                         break;
                     }
                 }
@@ -49,7 +70,7 @@ void showCH()
                 std::cout << "WR" << "  ";
             else if (ch[radek][sloupec] >= 30 && ch[radek][sloupec] <= 40)
                 std::cout << "WN" << "  ";
-            else if (ch[radek][sloupec] >= 40 && ch[radek][sloupec] <= 50)
+            else if (ch[radek][sloupec] >= 40 && ch[radek][sloupec] < 50)
                 std::cout << "WB" << "  ";
             else if (ch[radek][sloupec] >= 50 && ch[radek][sloupec] < 60)
                 std::cout << "WQ" << "  ";
@@ -63,7 +84,7 @@ void showCH()
                 std::cout << "BR" << "  ";
             else if (ch[radek][sloupec] >= -40 && ch[radek][sloupec] <= -30)
                 std::cout << "BN" << "  ";
-            else if (ch[radek][sloupec] >= -50 && ch[radek][sloupec] <= -40)
+            else if (ch[radek][sloupec] > -50 && ch[radek][sloupec] <= -40)
                 std::cout << "BB" << "  ";
             else if (ch[radek][sloupec] > -60 && ch[radek][sloupec] <= -50)
                 std::cout << "BQ" << "  ";
@@ -77,7 +98,7 @@ void showCH()
         }
         std::cout << std::endl;
     }
-    std::cout << "  -------------------------------\n   ";
+    std::cout << "  -------------------------------\n    ";
     for (int i = 0; i < N; i++) {
         std::cout << char(65+i) << "   ";
         //std::cout << i << "   ";
@@ -107,8 +128,6 @@ void rotateCH()
 }
 */
 
-std::vector<int> v1;
-
 void storeOptions(int x, int y)
 {
     v1.push_back(x);
@@ -117,7 +136,7 @@ void storeOptions(int x, int y)
 
 int char_on_int(char z)          //prevedeni char na int
 {
-    int a;
+    int a = 0;
     switch (z) {
         case 'a': { a = 0; break; }
         case 'b': { a = 1; break; }
@@ -127,6 +146,16 @@ int char_on_int(char z)          //prevedeni char na int
         case 'f': { a = 5; break; }
         case 'g': { a = 6; break; }
         case 'h': { a = 7; break; }
+            
+        case 'A': { a = 0; break; }
+        case 'B': { a = 1; break; }
+        case 'C': { a = 2; break; }
+        case 'D': { a = 3; break; }
+        case 'E': { a = 4; break; }
+        case 'F': { a = 5; break; }
+        case 'G': { a = 6; break; }
+        case 'H': { a = 7; break; }
+            
         case '1': { a = 7; break; }
         case '2': { a = 6; break; }
         case '3': { a = 5; break; }
@@ -135,8 +164,6 @@ int char_on_int(char z)          //prevedeni char na int
         case '6': { a = 2; break; }
         case '7': { a = 1; break; }
         case '8': { a = 0; break; }
-            
-        default: (char)a; break; //kdyz je char = '\n' tak takhle zustane
     }
     return a;
 }
